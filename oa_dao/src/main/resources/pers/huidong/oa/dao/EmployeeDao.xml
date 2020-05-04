@@ -11,13 +11,14 @@
         <result property="departmentSn" column="department_sn" javaType="String"/>
         <result property="post" column="post" javaType="String"/>
         <association property="department" column="department_sn" javaType="Department">
-<!--            这里的column属性不可与上面的一致    -->
+<!--            这里的column属性不可与上面的一致 ,可在sql中起别名 ！！！！ -->
             <id property="sn" column="dsn" javaType="String"/>
             <result property="name" column="dname" javaType="String"/>
         </association>
     </resultMap>
+<!--    这里的value中字段需要完全按表中顺序填写！！！！！！！！！-->
     <insert id="insert" parameterType="Employee">
-        insert into employee value (#{sn},#{name},#{password},#{departmentSn},#{post});
+        insert into employee value (#{sn},#{password},#{name},#{departmentSn},#{post});
     </insert>
 
     <update id="update" parameterType="Employee">
