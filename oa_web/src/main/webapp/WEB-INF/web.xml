@@ -5,6 +5,8 @@
 
 <web-app>
 <!--字符编码过滤器设置-->
+<!--  ①：<url-pattern>/</url-pattern>  会匹配到/login这样的路径型url，不会匹配到模式为*.jsp这样的后缀型url
+      ②：<url-pattern>/*</url-pattern> 会匹配所有url：路径型的和后缀型的url(包括/login,*.jsp,*.js和*.html等)-->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>pers.huidong.oa.global.EncodingFilter</filter-class>
