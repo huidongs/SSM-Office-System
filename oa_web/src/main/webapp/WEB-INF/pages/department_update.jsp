@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" language="java"%>
 <jsp:include page="top.jsp"/>
 <section id="content" class="table-layout animated fadeIn">
     <div class="tray tray-center">

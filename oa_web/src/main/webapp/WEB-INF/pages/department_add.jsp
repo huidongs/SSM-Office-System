@@ -1,6 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" language="java"%>
 <jsp:include page="top.jsp"/>
+<%--<%@ page isELIgnored="false"%>--%>
 <section id="content" class="table-layout animated fadeIn">
     <div class="tray tray-center">
         <div class="content-header">
@@ -9,6 +10,7 @@
         </div>
         <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;">
             <div class="panel heading-border">
+
                 <form:form action="/department/add" modelAttribute="department"  id="admin-form" name="addForm">
                     <div class="panel-body bg-light">
                         <div class="section-divider mt20 mb40">

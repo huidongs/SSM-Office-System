@@ -8,7 +8,7 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/db_oa?useUnicode=true"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/db_ssm?useUnicode=true&amp;serverTimezone=UTC&amp;characterEncoding=utf-8"></property>
         <property name="username" value="huidong"></property>
         <property name="password" value="huidong"></property>
     </bean>
