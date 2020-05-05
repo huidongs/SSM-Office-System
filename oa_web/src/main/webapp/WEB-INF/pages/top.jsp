@@ -8,7 +8,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
 
-    <title> 爱慕课OA--欢迎使用爱慕课OA系统 </title>
+    <title> 东东OA--欢迎使用东东OA系统 </title>
 
     <link rel="stylesheet" type="text/css" href="/assets/skin/default_skin/css/theme.css">
     <link rel="stylesheet" type="text/css" href="/assets/admin-tools/admin-forms/css/admin-forms.css">
