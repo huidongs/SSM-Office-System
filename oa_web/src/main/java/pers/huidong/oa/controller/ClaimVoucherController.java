@@ -33,8 +33,10 @@ public class ClaimVoucherController {
     @RequestMapping("/add")
     public String add(HttpSession session, ClaimVoucherInfo info){
         Employee employee = (Employee) session.getAttribute("employee");
+        info.getClaimVoucher().setCreateSn(employee.getSn());
         claimVoucherBiz.save(info.getClaimVoucher(),info.getItems());
         return "redirect:detail?id"+info.getClaimVoucher().getId();
+       // return "redirect:detail";
     }
     @RequestMapping("/detail")
     public String detail(int id,Map<String,Object> map){
@@ -42,6 +44,17 @@ public class ClaimVoucherController {
         map.put("items",claimVoucherBiz.getItems(id));
         map.put("records",claimVoucherBiz.getRecords(id));
         return "/claim_voucher_detail";
-
+    }
+    @RequestMapping("/self")
+    public String self(HttpSession session,Map<String,Object> map){
+        Employee employee = (Employee) session.getAttribute("employee");
+       map.put("list",claimVoucherBiz.getForSelf(employee.getSn()));
+        return "/claim_voucher_self";
+    }
+    @RequestMapping("/deal")
+    public String deal(HttpSession session,Map<String,Object> map){
+        Employee employee = (Employee) session.getAttribute("employee");
+        map.put("list",claimVoucherBiz.getForDeal(employee.getSn()));
+        return "/claim_voucher_deal";
     }
 }
