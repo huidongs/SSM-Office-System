@@ -1,6 +1,7 @@
 package pers.huidong.oa.biz.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import pers.huidong.oa.biz.GlobalBiz;
 import pers.huidong.oa.dao.EmployeeDao;
@@ -15,6 +16,7 @@ import pers.huidong.oa.entity.Employee;
 @Service("globalBiz")
 public class GlobalBizImpl implements GlobalBiz {
 
+    @Qualifier("employeeDao")
     @Autowired
     private EmployeeDao employeeDao;
     public Employee login(String sn, String password) {

@@ -11,7 +11,7 @@ public class ClaimVoucherItem {
     private Integer claimVoucherId;
     private String item;
     private Double amount;
-    private String content;
+    private String comment;
 
     public Integer getId() {
         return id;
@@ -45,11 +45,11 @@ public class ClaimVoucherItem {
         this.amount = amount;
     }
 
-    public String getContent() {
-        return content;
+    public String getComment() {
+        return comment;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

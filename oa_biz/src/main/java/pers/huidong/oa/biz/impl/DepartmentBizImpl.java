@@ -1,6 +1,7 @@
 package pers.huidong.oa.biz.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import pers.huidong.oa.biz.DepartmentBiz;
 import pers.huidong.oa.dao.DepartmentDao;
@@ -17,6 +18,7 @@ import java.util.List;
 @Service("departmentBiz")
 public class DepartmentBizImpl implements DepartmentBiz {
 
+    @Qualifier("departmentDao")
     @Autowired
     private DepartmentDao departmentDao;
 

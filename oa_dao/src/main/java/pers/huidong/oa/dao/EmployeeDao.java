@@ -1,5 +1,6 @@
 package pers.huidong.oa.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import pers.huidong.oa.entity.Employee;
 
@@ -16,4 +17,5 @@ public interface EmployeeDao {
     void update(Employee employee);
     Employee select(String sn);
     List<Employee> selectAll();
+    List<Employee> selectByDepartmentAndPost(@Param("dsn") String dsn, @Param("post")String post);
 }
